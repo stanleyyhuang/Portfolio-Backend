@@ -8,7 +8,13 @@ class User(BaseModel):
 class CreateUser(BaseModel):
     email: EmailStr
     password: str
+    first_name: str
+    last_name: str
 
 class UserOutput(BaseModel):
     email: EmailStr
-    
+    first_name: str
+    last_name: str
+
+class AdminUserOutput(UserOutput):
+    user_id: int
